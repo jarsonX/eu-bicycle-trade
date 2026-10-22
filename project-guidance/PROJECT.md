@@ -45,7 +45,7 @@ this delivery. Later stages may extend `eu-bicycle-trade`.
 Source availability, dimensions/codes, monthly frequency, filtered acquisition,
 indicator scales, historical category definitions/units, flags, confidentiality,
 revisions, coverage, and reuse/redistribution rights remain unverified.
-M02 in [LEARNING.md](LEARNING.md#m02--source-audit-and-sample) resolves these
+M03 in [LEARNING.md](LEARNING.md#m03--source-audit-and-sample) resolves these
 dependencies before affected calculations. No query or real sample is prevalidated.
 A filtered COMEXT API download or direct Eurostat export is acceptable.
 
