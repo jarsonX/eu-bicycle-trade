@@ -5,9 +5,10 @@
 - Started: 2026-10-22 (Europe/Warsaw).
 - Phase: theoretical introduction.
 - Active unit: M00 — Goal And Starting Point.
-- Status: part 1 checks and part 2 targeted grain/estimation checks met.
-  M00 lecture part 3 delivered in chat; its understanding check awaits learner
-  responses. M00 remains incomplete.
+- Status: parts 1–4 conceptual checks met within the recorded scope. Part 5
+  delivered in chat; its filtering/grouping understanding check awaits a learner
+  response. M00 remains incomplete.
+- Latest review: 2026-10-29 (Europe/Warsaw).
 - The owner explicitly requested guided learning under the current plan.
 - No previous progress record existed; lectures and exercises contained only
   `.gitkeep` placeholders. No completed preparation is evidenced in this repository.
@@ -26,6 +27,10 @@
 - Second lecture part: [m00-02-data-meaning-and-contracts.md](lectures/m00-02-data-meaning-and-contracts.md).
 - Part 2 understanding review: [m00-02-understanding-feedback.md](exercises/m00-02-understanding-feedback.md).
 - Third lecture part: [m00-03-provenance-snapshots-and-reproducibility.md](lectures/m00-03-provenance-snapshots-and-reproducibility.md).
+- Part 3 understanding review: [m00-03-understanding-feedback.md](exercises/m00-03-understanding-feedback.md).
+- Fourth lecture part: [m00-04-environment-configuration-and-notebook-state.md](lectures/m00-04-environment-configuration-and-notebook-state.md).
+- Part 4 understanding review: [m00-04-understanding-feedback.md](exercises/m00-04-understanding-feedback.md).
+- Fifth lecture part: [m00-05-pandas-inspection-filtering-and-grouping.md](lectures/m00-05-pandas-inspection-filtering-and-grouping.md).
 - Conversation: Polish. New saved documents/materials: English under
   [AGENTS.md](../AGENTS.md); no repository-specific language override recorded.
 - Scope orientation in chat: compare conventional/electric cycle imports and
@@ -79,9 +84,42 @@
 - Lecture part 3 covers provenance, source corrections, immutable snapshots,
   acquisition versus local processing, manifests, checksums and their limits,
   and reproducing numerical results with specified data/code/config/environment.
-  Its two questions await learner responses. All examples remain fictional.
-- Remaining M00 coverage includes environment/dependencies/configuration,
-  notebook state, pandas operations/joins/charts,
+  On 2026-10-29 the learner correctly proposed comparing the two snapshots and
+  recognized that losing the earlier snapshot prevents direct comparison.
+  He correctly declined to guarantee reproduction. For question 2 he later
+  clarified that he had overlooked the sentence saying only the corrected
+  export remained available; on noticing it, he correctly recognized that the
+  original input could not be recovered from that revised export alone.
+  Record this as an overlooked condition, not a demonstrated conceptual gap.
+  Part 3 conceptual checks are met based on his initial snapshot reasoning and
+  clarification. The near-duplicate follow-up is withdrawn following that
+  clarification; no answer is pending. The general caveat about unchanged code and
+  other run conditions remains in the lecture. All examples remain fictional.
+- Teaching adjustment requested by the learner: distinguish missed question
+  conditions from conceptual misunderstandings; consider his clarification and
+  demonstrated reasoning before assigning another check. The learner further
+  clarified that the original assessment was correct for his initial answer:
+  the mentor could not have known about the overlooked sentence. The later
+  explanation supplies the cause and resolves the check; it does not invalidate
+  the original assessment. The feedback records this distinction.
+- Lecture part 4 covers interpreter selection, libraries/dependencies/imports,
+  virtual environments and activation limits, version specifications and
+  indirect dependencies, configuration/Git ignore boundaries, notebook cells
+  and kernels, stale/hidden state, fresh-kernel versus fresh-environment checks,
+  and modules' limits. Learner correctly identified interpreter mismatch as
+  likely, explained why reinstalling in the terminal may not help, traced the
+  stale `total` to skipping cell 2, and proposed restarting and running all
+  cells in order. Both conceptual checks are met. Clarified that the kernel
+  retains the value and that selecting the intended prepared environment is
+  an alternative to installing into the current notebook environment.
+  No environment was set up, packages installed, versions selected, or notebook
+  executed; all examples are instructional.
+- Lecture part 5 covers DataFrame/Series, index versus business key, inspection,
+  missingness and duplicate-key diagnostics, boolean filtering/column selection,
+  and grouping with SQL analogies. Its subset-total/grain check awaits a learner
+  response. Official pandas documentation was consulted; examples were manually
+  reasoned, not executed. No project dependencies or data were changed.
+- Remaining M00 coverage includes pandas joins/charts,
   typing/runtime validation,
   exceptions/logging/network boundaries, test levels/fixtures/fakes,
   clean-environment reproduction in practice, and automated quality tools.
@@ -93,9 +131,11 @@
 
 ## Next Action
 
-Review the two part 3 answers about a changed result with unchanged code and a
-lost historical export. Clarify gaps, then continue M00 with the execution
-environment, dependencies/configuration, and notebook state versus modules.
+Review the part 5 filtering/grouping result, result grain, and subset versus
+all-reservations interpretation. Address actual gaps or clarifications without
+assuming that a missed condition proves a conceptual misunderstanding. Then
+continue M00 with joins, cardinality, and basic chart interpretation using the
+fictional reservation example.
 Record demonstrated understanding separately from delivered explanations.
 Finish all M00 coverage and its acceptance before M01 exercises; main-project
 work remains blocked until M01 and M02 readiness is demonstrated.

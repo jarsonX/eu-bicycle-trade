@@ -26,6 +26,13 @@ The analysis code has not changed. Different results can be caused by revised
 input, not only by a program defect. The calendar period and a source address
 are insufficient to identify the exact data used for the first report.
 
+Unchanged code alone does not prove that only the source changed: run
+configuration or the execution environment could also differ. In this disclosed
+example the source correction is the cause, but an investigation should verify
+the inputs and other run conditions rather than infer the cause from the code
+version alone. Compare reservation records by their agreed key, not only by
+row position, since export order can change without changing the observations.
+
 ## Provenance And Recovering Observations
 
 Data provenance is the recorded origin and processing history of data: which
