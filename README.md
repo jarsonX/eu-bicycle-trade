@@ -124,16 +124,18 @@ specific source and snapshot before redistribution.
 
 ## Course And Authorship Note
 
-This project is part of my **Data Science × AI** course. I designed the 
-curriculum, learning objectives, and an AI agent framework for creating course 
-materials and guiding my learning.
+This project is part of my **Data Science × AI** course. I designed the curriculum, learning objectives, and AI agent framework behind the course, including the agent workflow, teaching sequence, instruction routing, and completion criteria. The framework is maintained separately and is not included in this repository.
 
-Within this framework, authoring agents generate project specifications, lessons, 
-and instructions for teaching agents. The teaching agents then use those materials 
-to coach me through the lessons and project work. I defined the workflow, teaching 
-sequence, instruction routing, and completion criteria, with AI supporting 
-preparation, implementation, and review.
+The framework’s authoring agents generate project specifications, lessons, and instructions for teaching agents. Teaching agents then use those materials to coach me through the lessons and project work, with AI supporting preparation, implementation, and review.
 
-This repository contains one project from that learning path, together with its 
-lessons and teaching agent instructions. The framework used to generate those 
-materials and instructions is maintained separately and is not included here.
+This repository can be explored as a standalone project. It also documents my learning process, but the course content is optional and can be skipped if you are only interested in the project itself.
+
+The course content is located in `project-guidance/` and `project-materials/`. These folders contain:
+
+- The learning material and concepts practiced and reinforced through this project.
+- Instructions for the AI agent guiding my learning.
+- My learning progress, including feedback on answers I actually gave and tasks I completed.
+
+I include this record to make my skills and learning process more transparent, showing what I have practiced, how my understanding was assessed, and where I needed further work. I also hope it offers a practical example of using AI to build knowledge and develop skills through practice, feedback, and reflection, while keeping responsibility for learning and understanding with the learner.
+
+If you are interested in how I built my personal AI learning agent to tailor the topics, scope, and tool stack to my needs, feel free to get in touch. I would be happy to share how it works and help you build an approach that fits your own learning goals.
