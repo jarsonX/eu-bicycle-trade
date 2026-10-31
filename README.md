@@ -124,11 +124,16 @@ specific source and snapshot before redistribution.
 
 ## Course And Authorship Note
 
-This project is part of my **Data Science × AI** course. I created the course
-and the AI framework used to build it:
-I planned the curriculum and competencies, designed the agent workflow from
-project decisions to module instructions, and defined the teaching sequence,
-instruction routing, and completion criteria. AI supports preparation,
-implementation, and review within that structure.
+This project is part of my **Data Science × AI** course. I designed the 
+curriculum, learning objectives, and an AI agent framework for creating course 
+materials and guiding my learning.
 
-Agent instructions supporting project work are included in this repository.
+Within this framework, authoring agents generate project specifications, lessons, 
+and instructions for teaching agents. The teaching agents then use those materials 
+to coach me through the lessons and project work. I defined the workflow, teaching 
+sequence, instruction routing, and completion criteria, with AI supporting 
+preparation, implementation, and review.
+
+This repository contains one project from that learning path, together with its 
+lessons and teaching agent instructions. The framework used to generate those 
+materials and instructions is maintained separately and is not included here.
