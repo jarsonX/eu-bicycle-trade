@@ -5,10 +5,11 @@
 - Started: 2026-10-22 (Europe/Warsaw).
 - Phase: theoretical introduction.
 - Active unit: M00 — Goal And Starting Point.
-- Status: parts 1–4 conceptual checks met within the recorded scope. Part 5
-  delivered in chat; its filtering/grouping understanding check awaits a learner
-  response. M00 remains incomplete.
-- Latest review: 2026-10-29 (Europe/Warsaw).
+- Status: parts 1–7 conceptual reviews complete within their recorded scope.
+  Part 7 recognizes independent scope-control reasoning and hypothesis/evidence
+  reasoning; the ratio setup was mentor-supplied, with no independent numerical
+  percentage answer claimed. M00 remains incomplete.
+- Latest review: 2026-10-31 (Europe/Warsaw).
 - The owner explicitly requested guided learning under the current plan.
 - No previous progress record existed; lectures and exercises contained only
   `.gitkeep` placeholders. No completed preparation is evidenced in this repository.
@@ -31,6 +32,11 @@
 - Fourth lecture part: [m00-04-environment-configuration-and-notebook-state.md](lectures/m00-04-environment-configuration-and-notebook-state.md).
 - Part 4 understanding review: [m00-04-understanding-feedback.md](exercises/m00-04-understanding-feedback.md).
 - Fifth lecture part: [m00-05-pandas-inspection-filtering-and-grouping.md](lectures/m00-05-pandas-inspection-filtering-and-grouping.md).
+- Part 5 understanding review: [m00-05-understanding-feedback.md](exercises/m00-05-understanding-feedback.md).
+- Sixth lecture part: [m00-06-joins-and-cardinality.md](lectures/m00-06-joins-and-cardinality.md).
+- Part 6 understanding review: [m00-06-understanding-feedback.md](exercises/m00-06-understanding-feedback.md).
+- Seventh lecture part: [m00-07-charts-and-interpretation.md](lectures/m00-07-charts-and-interpretation.md).
+- Part 7 understanding review: [m00-07-understanding-feedback.md](exercises/m00-07-understanding-feedback.md).
 - Conversation: Polish. New saved documents/materials: English under
   [AGENTS.md](../AGENTS.md); no repository-specific language override recorded.
 - Scope orientation in chat: compare conventional/electric cycle imports and
@@ -116,11 +122,49 @@
   executed; all examples are instructional.
 - Lecture part 5 covers DataFrame/Series, index versus business key, inspection,
   missingness and duplicate-key diagnostics, boolean filtering/column selection,
-  and grouping with SQL analogies. Its subset-total/grain check awaits a learner
-  response. Official pandas documentation was consulted; examples were manually
-  reasoned, not executed. No project dependencies or data were changed.
-- Remaining M00 coverage includes pandas joins/charts,
-  typing/runtime validation,
+  and grouping with SQL analogies. On 2026-10-31 the learner correctly derived
+  A = 60 and B = 45, identified reservations 2 and 3 as contributors, and
+  explained aggregation even with one retained row per group. His explanation
+  establishes subset scope; feedback explicitly labels the result grain as one
+  room for reservations lasting at least 45 minutes on the sample day. The check
+  is met. Accept his explicit conversational shorthand "the code returns" for
+  assigning results; it is not evidence of a return/display misunderstanding.
+  Official pandas documentation was consulted; examples were manually reasoned,
+  not executed. No project dependencies or data were changed.
+- Lecture part 6 covers joins and input/output grains, key matching cardinality,
+  row multiplication, many-to-one validation, match coverage indicators,
+  left versus inner joins, and preservation checks for lookup enrichment.
+  Learner correctly derived four rows and 180 minutes for a lookup containing
+  B twice, identified the repeated B reservation, and predicted rejection by
+  many-to-one validation. Clarified "exactly one match": validation checks
+  right-side key uniqueness, while match coverage is separate and zero matches
+  can pass the uniqueness check. The part 6 checks are met with that note.
+  Examples remain fictional and unexecuted; no packages were installed.
+- Lecture part 7 covers bar/line chart purpose, pandas plotting code, axis units
+  and zero baselines for bars, scope/coverage, totals versus available-time
+  percentages, and observations versus causal hypotheses. Learner asked what
+  "available" meant in question 1. The mentor clarified the total bookable window
+  but also supplied the specific numerator/denominator substitutions, exceeding
+  the requested clarification. The learner correctly objected that this supplied
+  part of the solution. The learner subsequently explained that the chat prompt's
+  "same day" did not establish a sufficiently explicit link to the earlier
+  reservation totals for him. He independently checked business meaning and
+  time scope before calculating. Record that as positive analytical evidence,
+  not a percentage-calculation failure. The supplied setup remains mentor
+  assistance; no independent numerical percentage answer is claimed.
+  For question 2 he correctly identified the equipment explanation as a hypothesis,
+  proposed surveying users' booking reasons, and offered coffee proximity as an
+  alternative. Clarified that survey reports do not alone prove causality,
+  empirical hypotheses may remain unresolved, and multiple causes can coexist.
+  Part 7 introductory conceptual review is complete with these evidence limits;
+  do not repeat arithmetic merely to recognize the demonstrated reasoning.
+  A separate conversation illustration is stored in
+  `project-materials/lectures/visuals/reserved-minutes.html`; it is not evidence
+  of a pandas run or learner execution. Plotting documentation was consulted;
+  no environment setup or package installation was performed.
+  Local material links and whitespace were checked. The illustration script was
+  reviewed statically; it was not browser-rendered and no runtime check is claimed.
+- Remaining M00 coverage includes typing/runtime validation,
   exceptions/logging/network boundaries, test levels/fixtures/fakes,
   clean-environment reproduction in practice, and automated quality tools.
   No full M00 pass is recorded.
@@ -131,11 +175,17 @@
 
 ## Next Action
 
-Review the part 5 filtering/grouping result, result grain, and subset versus
-all-reservations interpretation. Address actual gaps or clarifications without
-assuming that a missed condition proves a conceptual misunderstanding. Then
-continue M00 with joins, cardinality, and basic chart interpretation using the
-fictional reservation example.
+Continue M00 with type annotations versus runtime validation. Part 7 review is
+closed at the introductory scope without requiring repeated arithmetic; its
+independent reasoning and mentor assistance are distinguished in the feedback.
+Future prompts must identify relevant data, time scope, grain, and definitions
+explicitly. Treat justified business-context clarification as analytical evidence.
+For requests to clarify a prompt, explain only the ambiguous term or assumption;
+leave value selection, concrete substitutions, and calculations to the learner
+unless asked.
+Address actual gaps or clarifications without assuming that a missed condition
+proves a conceptual misunderstanding. Use the fictional reservation example
+for the next theoretical explanation.
 Record demonstrated understanding separately from delivered explanations.
 Finish all M00 coverage and its acceptance before M01 exercises; main-project
 work remains blocked until M01 and M02 readiness is demonstrated.

@@ -1,0 +1,66 @@
+<div id="m00-reserved-minutes">
+  <h3>Reserved time by room · sample day</h3>
+  <div class="text-small">Fictional data · complete reservations · minutes</div>
+  <div data-plot></div>
+</div>
+<style>
+  #m00-reserved-minutes { display: grid; gap: calc(var(--font-size-base) * 0.5); color: var(--foreground); }
+  #m00-reserved-minutes svg { display: block; width: 100%; }
+  #m00-reserved-minutes svg text { fill: var(--foreground); font-size: 12px; font-weight: 400; }
+  #m00-reserved-minutes .grid { stroke: var(--border); stroke-width: 1; }
+  #m00-reserved-minutes .bar { fill: var(--viz-series-1); }
+</style>
+<script>
+(() => {
+  const root = document.getElementById('m00-reserved-minutes');
+  const plot = root.querySelector('[data-plot]');
+  const values = [{room: 'A', minutes: 90}, {room: 'B', minutes: 45}];
+  const ns = 'http://www.w3.org/2000/svg';
+  function element(name, attributes, text) {
+    const item = document.createElementNS(ns, name);
+    for (const [key, value] of Object.entries(attributes)) item.setAttribute(key, String(value));
+    if (text !== undefined) item.textContent = text;
+    return item;
+  }
+  function draw() {
+    const width = plot.getBoundingClientRect().width;
+    if (width <= 0) return;
+    const height = 300;
+    const margin = {left: 72, right: 22, top: 26, bottom: 54};
+    const frameWidth = width - margin.left - margin.right;
+    const frameHeight = height - margin.top - margin.bottom;
+    const maximum = Math.max(...values.map(value => value.minutes));
+    const step = 30;
+    const ceiling = Math.ceil(maximum * 1.15 / step) * step;
+    const y = value => margin.top + frameHeight * (1 - value / ceiling);
+    const svg = element('svg', {viewBox: `0 0 ${width} ${height}`, height, role: 'img', 'aria-labelledby': 'm00-chart-title m00-chart-desc'});
+    svg.append(element('title', {id: 'm00-chart-title'}, 'Reserved minutes by room'));
+    svg.append(element('desc', {id: 'm00-chart-desc'}, 'Fictional complete data for one sample day. Room A: 90 minutes. Room B: 45 minutes. Vertical scale starts at zero.'));
+    svg.append(element('rect', {'data-chart-frame': '', x: margin.left, y: margin.top, width: frameWidth, height: frameHeight, fill: 'none', stroke: 'var(--border)', 'stroke-width': 1}));
+    for (let tick = 0; tick <= ceiling; tick += step) {
+      const position = y(tick);
+      svg.append(element('line', {class: 'grid', x1: margin.left, x2: width - margin.right, y1: position, y2: position}));
+      svg.append(element('text', {x: margin.left - 10, y: position + 4, 'text-anchor': 'end', class: 'tabular-nums'}, tick));
+    }
+    const cell = frameWidth / values.length;
+    const barWidth = Math.min(72, cell * 0.55);
+    values.forEach((value, index) => {
+      const center = margin.left + cell * (index + 0.5);
+      svg.append(element('rect', {class: 'bar', x: center - barWidth / 2, y: y(value.minutes), width: barWidth, height: y(0) - y(value.minutes)}));
+      svg.append(element('text', {x: center, y: y(value.minutes) - 8, 'text-anchor': 'middle', class: 'tabular-nums'}, value.minutes));
+      svg.append(element('text', {x: center, y: y(0) + 21, 'text-anchor': 'middle'}, value.room));
+    });
+    svg.append(element('text', {class: 'axis-title', 'data-axis': 'x', x: margin.left + frameWidth / 2, y: height - 8, 'text-anchor': 'middle'}, 'Room'));
+    const axisCenter = margin.top + frameHeight / 2;
+    svg.append(element('text', {class: 'axis-title', 'data-axis': 'y', x: 17, y: axisCenter, transform: `rotate(-90 17 ${axisCenter})`, 'text-anchor': 'middle'}, 'Reserved time (minutes)'));
+    plot.replaceChildren(svg);
+    const boundary = svg.getBoundingClientRect();
+    const labels = [...svg.querySelectorAll('text')].map(label => label.getBoundingClientRect());
+    if (labels.some(box => box.left < boundary.left || box.right > boundary.right || box.top < boundary.top || box.bottom > boundary.bottom)) {
+      svg.setAttribute('data-layout-review', 'label-boundary');
+    }
+  }
+  new ResizeObserver(draw).observe(plot);
+  draw();
+})();
+</script>
