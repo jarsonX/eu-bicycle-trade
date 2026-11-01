@@ -5,17 +5,23 @@
 - Started: 2026-10-22 (Europe/Warsaw).
 - Phase: theoretical introduction.
 - Active unit: M00 — Goal And Starting Point.
-- Status: parts 1–7 conceptual reviews complete within their recorded scope.
-  Part 7 recognizes independent scope-control reasoning and hypothesis/evidence
-  reasoning; the ratio setup was mentor-supplied, with no independent numerical
-  percentage answer claimed. M00 remains incomplete.
-- Latest review: 2026-10-31 (Europe/Warsaw).
+- Status: M00 theory and introductory conceptual review complete. All 11 parts
+  were delivered and reviewed within their recorded scope; part 11 feedback
+  was saved after discussion, learner clarifications, and his explicit request.
+  Active unit remains M00, awaiting his separate confirmation to start M01.
+  Part 7's ratio setup remains mentor-supplied, with no independent numerical
+  percentage answer claimed. Completion does not imply practical implementation
+  mastery or readiness for main-project work.
+- Latest delivery: 2026-11-01 (Europe/Warsaw).
 - The owner explicitly requested guided learning under the current plan.
+- Owner transition boundary: M01 must not start without his explicit
+  confirmation. Completing M00 does not grant that confirmation. Keep the
+  active unit at M00 after its final review until permission to advance arrives.
 - No previous progress record existed; lectures and exercises contained only
   `.gitkeep` placeholders. No completed preparation is evidenced in this repository.
   The learner has not reported preparation completed elsewhere; no earlier
-  completion is inferred. The current diagnostic and understanding checks now
-  provide evidence for continuing M00.
+  completion is inferred. The subsequent diagnostic, lectures, discussion, and
+  understanding reviews provide the evidence for the completed M00 introduction.
 
 ## Context And Delivery
 
@@ -37,6 +43,19 @@
 - Part 6 understanding review: [m00-06-understanding-feedback.md](exercises/m00-06-understanding-feedback.md).
 - Seventh lecture part: [m00-07-charts-and-interpretation.md](lectures/m00-07-charts-and-interpretation.md).
 - Part 7 understanding review: [m00-07-understanding-feedback.md](exercises/m00-07-understanding-feedback.md).
+- Eighth lecture part: [m00-08-type-hints-and-runtime-validation.md](lectures/m00-08-type-hints-and-runtime-validation.md).
+- Part 8 understanding review: [m00-08-understanding-feedback.md](exercises/m00-08-understanding-feedback.md).
+- Ninth lecture part: [m00-09-errors-logging-and-network-boundaries.md](lectures/m00-09-errors-logging-and-network-boundaries.md).
+- Part 9 understanding review: [m00-09-understanding-feedback.md](exercises/m00-09-understanding-feedback.md).
+- Tenth lecture part: [m00-10-testing-and-independent-expectations.md](lectures/m00-10-testing-and-independent-expectations.md).
+- Part 10 understanding review: [m00-10-understanding-feedback.md](exercises/m00-10-understanding-feedback.md).
+- Eleventh lecture part: [m00-11-quality-gates-and-reproducibility.md](lectures/m00-11-quality-gates-and-reproducibility.md).
+- Part 11 understanding review: [m00-11-understanding-feedback.md](exercises/m00-11-understanding-feedback.md).
+- Working delivery split stated in chat: 11 M00 lecture parts in total; part 8
+  covers types/validation, part 9 exceptions/warnings/logging/network limits,
+  part 10 testing, and part 11 quality tools/automation, reproducibility, README,
+  and the final M00 understanding review. This subdivision does not change the
+  module prerequisites or acceptance in the learning guide.
 - Conversation: Polish. New saved documents/materials: English under
   [AGENTS.md](../AGENTS.md); no repository-specific language override recorded.
 - Scope orientation in chat: compare conventional/electric cycle imports and
@@ -164,10 +183,85 @@
   no environment setup or package installation was performed.
   Local material links and whitespace were checked. The illustration script was
   reviewed statically; it was not browser-rendered and no runtime check is claimed.
-- Remaining M00 coverage includes typing/runtime validation,
-  exceptions/logging/network boundaries, test levels/fixtures/fakes,
-  clean-environment reproduction in practice, and automated quality tools.
-  No full M00 pass is recorded.
+- Lecture part 8 covers value types, argument/return annotations, static
+  checking and its limits, plain Python runtime behavior, business constraints
+  and units beyond simple types, a bounded nonblank-room-label value check,
+  and validation at input boundaries. Learner correctly identified the `int`
+  versus `str` return mismatch and lack of plain-Python runtime enforcement;
+  he correctly explained integer hour/minute compatibility and normalization
+  to the required minutes. Both checks are met. He correctly noted that source
+  units and the target contract were already given, so no additional fact
+  needed to be established for that question. The mentor's request to
+  "establish" more was redundant; no hidden requirements are assessed.
+  Python/mypy documentation was consulted; code was reasoned through, not run.
+  No type checker, interpreter, dependency, or project component was installed
+  or selected. Exceptions are introduced only as needed for the value check;
+  handling and failure policy remain in part 9.
+- Lecture part 9 covers contract-based failure/warning policy, exceptions and
+  selective try/except handling, re-raising, failure status and success artifacts,
+  logging levels/configuration and their separation from control flow, source
+  acquisition boundaries, response validation, timeout semantics, and bounded
+  retries. Learner correctly traced the final print and rejected an empty-table
+  success result as masking failure and misleading later analyses. He proposed
+  detailed diagnostic logs and distinguished the known timeout symptom from
+  possible causes. He also addressed how the analytical team could support users
+  when data is irrecoverable, using clear unavailable-data and affected-calculation
+  labels. This business proposal was compatible with stopping the invalid run;
+  he did not propose that the program autonomously change its contract.
+  The mentor's earlier assessment conflated these responsibilities and understated
+  his explicit diagnostic reasoning. The feedback now records the correction
+  after discussing his explanation. General control-flow and network-timeout
+  details were supplementary context, not grounds to misrepresent the answer.
+  Part 9 introductory conceptual review is complete; no repeated questions are
+  needed. No actual root cause was established in the hypothetical. Official
+  Python/Requests documentation was consulted; no examples were run, source data
+  fetched, or dependencies selected or installed.
+- Feedback workflow clarified by the learner: discuss disputed interpretations
+  and doubts in chat before finalizing written feedback. Evaluate business or
+  technical extensions on their actual meaning and assumptions. Do not attribute
+  automatic program decisions to a proposal about team action, or treat a broader
+  reasoned answer as wrong merely because it exceeds the expected answer.
+- Lecture part 10 covers automated assertions, unit/integration scope,
+  independently derived expectations, normal/edge/error cases, expected
+  exceptions, pytest fixtures, temporary test paths, transport doubles,
+  regression prevention, isolation/repeatability, and limits of passed tests.
+  Learner proposed focused reader-component tests under explicit architectural
+  assumptions, reordered equivalent records to distinguish position from values,
+  and stage-by-stage integration diagnosis followed by targeted regression tests.
+  He correctly replaced source behavior while retaining real coordinator handling
+  and proposed immediate success, timeout-then-success, and two-timeout scenarios.
+  Discussion added independent expected checks, scoped passing-test claims,
+  faithful exception behavior, and explicit attempt counts. He accepted the
+  discussion and explicitly requested saving the feedback. Part 10 is complete;
+  no implementation or execution is inferred from this conceptual design.
+  Official
+  pytest documentation was consulted; code examples were reasoned through,
+  not executed. No tests, packages, source calls, or project components were run
+  or installed, and no learner readiness is inferred from the prepared lecture.
+- Lecture part 11 covers Ruff lint versus format, type-check/test/validation
+  roles, quality-gate scope, real CI evidence for the evaluated version,
+  fresh-environment and exact-snapshot reproduction, verified README handover,
+  and the approved project question/scope/product evidence. Learner correctly
+  identified the missing actual CI run for B, limits of local checks, the
+  undeclared dependency, and the need for the exact historical snapshot. His
+  statement about missing data validation referred to missing evidence; the
+  mentor's speculation about an unmentioned mechanism was an unnecessary
+  correction. He clarified that "sales" meant imports/exports, so no retail/trade
+  confusion is inferred. Project interpretation limits, reproducible setup
+  repair, and preserving accepted report conclusions were explained during
+  discussion, rather than claimed as independently listed beforehand.
+  Practical refresh priorities are Python syntax/functions and modular code
+  design, learned through practical work without an extra preliminary refresher
+  course. Part 11 feedback was saved only after discussion and his explicit
+  request. The cumulative introductory M00 review is complete at this level.
+  Official tool documentation and current project scope were consulted; no
+  Ruff/type-checker/pytest run or CI execution, environment setup, dependency
+  selection, source-data acquisition, or M01 work was performed.
+- All planned M00 lecture parts and the introductory final review are complete.
+  Independent reasoning and mentor assistance remain distinguished in the
+  feedback. No implementation, practical readiness, or final-product acceptance
+  is claimed. M01 requires the owner's separate explicit confirmation, which
+  has not been given; the request to save feedback does not authorize advancing.
 - Prior preparation elsewhere has not been reported. No independent-exercise
   readiness, source access, data analysis, or project implementation is evidenced.
 - The diagnostic prompt and this record were prepared by the agent; they are not
@@ -175,9 +269,14 @@
 
 ## Next Action
 
-Continue M00 with type annotations versus runtime validation. Part 7 review is
-closed at the introductory scope without requiring repeated arithmetic; its
-independent reasoning and mentor assistance are distinguished in the feedback.
+Remain in completed M00 and wait for explicit owner confirmation before M01;
+do not start exercise setup, install dependencies, or silently advance units.
+The final review and feedback are recorded; do not repeat completed questions.
+When the owner confirms moving to M01, read its prerequisites and guide the
+independent exercise setup, supporting Python syntax/functions and modularity
+as needed. Do not add a separate preliminary Python refresher course.
+Assess only stated requirements; do not ask the learner to infer extra unknowns
+when the question already supplies the source and contract facts.
 Future prompts must identify relevant data, time scope, grain, and definitions
 explicitly. Treat justified business-context clarification as analytical evidence.
 For requests to clarify a prompt, explain only the ambiguous term or assumption;
