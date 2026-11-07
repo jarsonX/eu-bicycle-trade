@@ -36,9 +36,9 @@
 
 - Sequence, prerequisites, and learning acceptance: [LEARNING.md](../project-guidance/LEARNING.md).
 - Analytical scope and product acceptance: [PROJECT.md](../project-guidance/PROJECT.md).
-- First M01 task: [m01-01-interpreter-discovery.md](exercises/prompts/m01-01-interpreter-discovery.md).
-- Current M01 task: [m01-02-virtual-environment.md](exercises/prompts/m01-02-virtual-environment.md).
-- Starting-point diagnostic: [m00-starting-point.md](exercises/prompts/m00-starting-point.md).
+- First M01 task: [m01-01-interpreter-discovery.md](exercises/tasks/m01-01-interpreter-discovery.md).
+- Current M01 task: [m01-02-virtual-environment.md](exercises/tasks/m01-02-virtual-environment.md).
+- Starting-point diagnostic: [m00-starting-point.md](exercises/tasks/m00-starting-point.md).
 - Diagnostic review: [m00-starting-point-feedback.md](exercises/feedback/m00-starting-point-feedback.md).
 - First lecture part: [m00-01-responsibilities-and-interfaces.md](lectures/m00-01-responsibilities-and-interfaces.md).
 - Part 1 understanding review: [m00-01-understanding-feedback.md](exercises/feedback/m00-01-understanding-feedback.md).
@@ -310,7 +310,7 @@
   created only the prompt, not the exercise folder, environment, code, or tests.
 - Before creating `m01-reservations`, the learner requested organizing the
   exercise directory so practical work would not mix with feedback files.
-  The mentor separated existing files into `exercises/prompts/` and
+  The mentor separated existing files into `exercises/tasks/` and
   `exercises/feedback/`, moved the empty-directory placeholder to
   `exercises/workspaces/`, rebased local links, and updated the assigned M01
   path to `project-materials/exercises/workspaces/m01-reservations/`.
@@ -318,11 +318,17 @@
   exercise IDs, and recorded learning evidence are preserved; this is repository
   maintenance by the mentor, not learner coding evidence. The practical workspace
   and virtual environment remain uncreated by the mentor.
+- The owner explicitly chose `tasks/` for task descriptions. The mentor renamed
+  the directory, updated layout guidance and incoming links, and preserved task
+  contents. M01 remains active with the same pending learner environment setup.
+  Checks: all three moved files have identical SHA256 hashes; 90 local file
+  links and 136 Markdown heading anchors resolve; no old directory references
+  remain, and `git diff --check` passes.
 
 ## Next Action
 
 Review the learner's attempt at
-[m01-02-virtual-environment.md](exercises/prompts/m01-02-virtual-environment.md), using
+[m01-02-virtual-environment.md](exercises/tasks/m01-02-virtual-environment.md), using
 the available Python 3.15.2. Do not repeat installation or require 3.14.
 The learner's target directory is now
 `project-materials/exercises/workspaces/m01-reservations/`; use the updated

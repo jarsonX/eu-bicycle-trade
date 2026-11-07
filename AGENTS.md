@@ -32,8 +32,9 @@ Authoring or reviewing them does not start teaching.
 - Keep instructions, context, domain rules, unit/exercise specifications, and
   acceptance in `project-guidance/`.
 - Use `project-materials/lectures/` for generated lectures and
-  `project-materials/exercises/` for prompts, code/data/tests, attempts, and feedback.
-  Within exercises, keep task descriptions in `prompts/`, reviews of learner
+  `project-materials/exercises/` for task descriptions, code/data/tests, attempts,
+  and feedback.
+  Within exercises, keep task descriptions in `tasks/`, reviews of learner
   answers/attempts in `feedback/`, and practical exercise directories containing
   code/data/tests and working attempts in `workspaces/`. Create a workspace only
   when its exercise starts; use stable exercise IDs in filenames/directory names.
