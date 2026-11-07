@@ -1,7 +1,7 @@
 # M00 Part 6 Understanding Feedback
 
 Reviewed: 2026-10-31 (Europe/Warsaw). Evidence: the learner's chat answer to
-[m00-06-joins-and-cardinality.md](../lectures/m00-06-joins-and-cardinality.md).
+[m00-06-joins-and-cardinality.md](../../lectures/m00-06-joins-and-cardinality.md).
 
 The learner correctly derived four output rows: two distinct A reservations and
 two copies of B's reservation. He correctly calculated 180 minutes as

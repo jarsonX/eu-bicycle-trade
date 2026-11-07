@@ -3,20 +3,29 @@
 ## Current State
 
 - Started: 2026-10-22 (Europe/Warsaw).
-- Phase: theoretical introduction.
-- Active unit: M00 — Goal And Starting Point.
-- Status: M00 theory and introductory conceptual review complete. All 11 parts
+- Phase: independent exercises.
+- Active unit: M01 — Environment And Repository.
+- Status: M01 started on 2026-11-07. Learner-supplied terminal output confirms
+  Python 3.15.2 responds to both `py --version` and `py -V:3.15 --version`.
+  Python 3.14 is absent according to the explicit version-selection error.
+  Continue the exercise with 3.15; virtual-environment setup is assigned,
+  with learner execution and output pending. The learner requested organizing
+  exercise materials before creating his workspace; that reorganization is done.
+  M00 theory and introductory
+  conceptual review are complete. All 11 parts
   were delivered and reviewed within their recorded scope; part 11 feedback
   was saved after discussion, learner clarifications, and his explicit request.
-  Active unit remains M00, awaiting his separate confirmation to start M01.
   Part 7's ratio setup remains mentor-supplied, with no independent numerical
   percentage answer claimed. Completion does not imply practical implementation
   mastery or readiness for main-project work.
-- Latest delivery: 2026-11-01 (Europe/Warsaw).
+- Latest delivery: 2026-11-07 (Europe/Warsaw), exercise materials reorganized
+  and the assigned workspace path updated before learner setup.
 - The owner explicitly requested guided learning under the current plan.
-- Owner transition boundary: M01 must not start without his explicit
-  confirmation. Completing M00 does not grant that confirmation. Keep the
-  active unit at M00 after its final review until permission to advance arrives.
+- Owner transition boundary satisfied on 2026-11-07: the learner explicitly
+  said "Skończyliśmy M00. Przejdźmy do M01." He reaffirmed that the agent is
+  a coach/mentor who teaches problem solving and coding rather than completing
+  tasks for him. The learner owns setup, code, tests, and their execution;
+  the mentor provides explanations, disclosed tasks, gradual hints, and review.
 - No previous progress record existed; lectures and exercises contained only
   `.gitkeep` placeholders. No completed preparation is evidenced in this repository.
   The learner has not reported preparation completed elsewhere; no earlier
@@ -27,30 +36,32 @@
 
 - Sequence, prerequisites, and learning acceptance: [LEARNING.md](../project-guidance/LEARNING.md).
 - Analytical scope and product acceptance: [PROJECT.md](../project-guidance/PROJECT.md).
-- Starting-point diagnostic: [m00-starting-point.md](exercises/m00-starting-point.md).
-- Diagnostic review: [m00-starting-point-feedback.md](exercises/m00-starting-point-feedback.md).
+- First M01 task: [m01-01-interpreter-discovery.md](exercises/prompts/m01-01-interpreter-discovery.md).
+- Current M01 task: [m01-02-virtual-environment.md](exercises/prompts/m01-02-virtual-environment.md).
+- Starting-point diagnostic: [m00-starting-point.md](exercises/prompts/m00-starting-point.md).
+- Diagnostic review: [m00-starting-point-feedback.md](exercises/feedback/m00-starting-point-feedback.md).
 - First lecture part: [m00-01-responsibilities-and-interfaces.md](lectures/m00-01-responsibilities-and-interfaces.md).
-- Part 1 understanding review: [m00-01-understanding-feedback.md](exercises/m00-01-understanding-feedback.md).
+- Part 1 understanding review: [m00-01-understanding-feedback.md](exercises/feedback/m00-01-understanding-feedback.md).
 - Second lecture part: [m00-02-data-meaning-and-contracts.md](lectures/m00-02-data-meaning-and-contracts.md).
-- Part 2 understanding review: [m00-02-understanding-feedback.md](exercises/m00-02-understanding-feedback.md).
+- Part 2 understanding review: [m00-02-understanding-feedback.md](exercises/feedback/m00-02-understanding-feedback.md).
 - Third lecture part: [m00-03-provenance-snapshots-and-reproducibility.md](lectures/m00-03-provenance-snapshots-and-reproducibility.md).
-- Part 3 understanding review: [m00-03-understanding-feedback.md](exercises/m00-03-understanding-feedback.md).
+- Part 3 understanding review: [m00-03-understanding-feedback.md](exercises/feedback/m00-03-understanding-feedback.md).
 - Fourth lecture part: [m00-04-environment-configuration-and-notebook-state.md](lectures/m00-04-environment-configuration-and-notebook-state.md).
-- Part 4 understanding review: [m00-04-understanding-feedback.md](exercises/m00-04-understanding-feedback.md).
+- Part 4 understanding review: [m00-04-understanding-feedback.md](exercises/feedback/m00-04-understanding-feedback.md).
 - Fifth lecture part: [m00-05-pandas-inspection-filtering-and-grouping.md](lectures/m00-05-pandas-inspection-filtering-and-grouping.md).
-- Part 5 understanding review: [m00-05-understanding-feedback.md](exercises/m00-05-understanding-feedback.md).
+- Part 5 understanding review: [m00-05-understanding-feedback.md](exercises/feedback/m00-05-understanding-feedback.md).
 - Sixth lecture part: [m00-06-joins-and-cardinality.md](lectures/m00-06-joins-and-cardinality.md).
-- Part 6 understanding review: [m00-06-understanding-feedback.md](exercises/m00-06-understanding-feedback.md).
+- Part 6 understanding review: [m00-06-understanding-feedback.md](exercises/feedback/m00-06-understanding-feedback.md).
 - Seventh lecture part: [m00-07-charts-and-interpretation.md](lectures/m00-07-charts-and-interpretation.md).
-- Part 7 understanding review: [m00-07-understanding-feedback.md](exercises/m00-07-understanding-feedback.md).
+- Part 7 understanding review: [m00-07-understanding-feedback.md](exercises/feedback/m00-07-understanding-feedback.md).
 - Eighth lecture part: [m00-08-type-hints-and-runtime-validation.md](lectures/m00-08-type-hints-and-runtime-validation.md).
-- Part 8 understanding review: [m00-08-understanding-feedback.md](exercises/m00-08-understanding-feedback.md).
+- Part 8 understanding review: [m00-08-understanding-feedback.md](exercises/feedback/m00-08-understanding-feedback.md).
 - Ninth lecture part: [m00-09-errors-logging-and-network-boundaries.md](lectures/m00-09-errors-logging-and-network-boundaries.md).
-- Part 9 understanding review: [m00-09-understanding-feedback.md](exercises/m00-09-understanding-feedback.md).
+- Part 9 understanding review: [m00-09-understanding-feedback.md](exercises/feedback/m00-09-understanding-feedback.md).
 - Tenth lecture part: [m00-10-testing-and-independent-expectations.md](lectures/m00-10-testing-and-independent-expectations.md).
-- Part 10 understanding review: [m00-10-understanding-feedback.md](exercises/m00-10-understanding-feedback.md).
+- Part 10 understanding review: [m00-10-understanding-feedback.md](exercises/feedback/m00-10-understanding-feedback.md).
 - Eleventh lecture part: [m00-11-quality-gates-and-reproducibility.md](lectures/m00-11-quality-gates-and-reproducibility.md).
-- Part 11 understanding review: [m00-11-understanding-feedback.md](exercises/m00-11-understanding-feedback.md).
+- Part 11 understanding review: [m00-11-understanding-feedback.md](exercises/feedback/m00-11-understanding-feedback.md).
 - Working delivery split stated in chat: 11 M00 lecture parts in total; part 8
   covers types/validation, part 9 exceptions/warnings/logging/network limits,
   part 10 testing, and part 11 quality tools/automation, reproducibility, README,
@@ -260,21 +271,69 @@
 - All planned M00 lecture parts and the introductory final review are complete.
   Independent reasoning and mentor assistance remain distinguished in the
   feedback. No implementation, practical readiness, or final-product acceptance
-  is claimed. M01 requires the owner's separate explicit confirmation, which
-  has not been given; the request to save feedback does not authorize advancing.
+  is claimed. At the close of M00, separate confirmation for M01 was still
+  pending; saving feedback did not authorize advancing. The owner subsequently
+  provided that confirmation on 2026-11-07, as recorded in Current State.
 - Prior preparation elsewhere has not been reported. No independent-exercise
   readiness, source access, data analysis, or project implementation is evidenced.
 - The diagnostic prompt and this record were prepared by the agent; they are not
   evidence of learner competence or completion of M00.
+- On 2026-11-07 the mentor re-read repository instructions, the learning guide,
+  and the full progress record; M00 completion meets the M01 prerequisite.
+  The working tree was clean before this transition. No root `.gitignore`,
+  Python dependency/configuration file, or prior M01 task was found in the
+  inspected inventory. Interpreter discovery and its explanation were assigned
+  in chat and saved in the first M01 prompt. At that point no learner output
+  had been received, and no interpreter invocation, environment creation,
+  installation, code/test implementation, or learner execution was claimed.
+  The mentor did not run the
+  discovery task on the learner's behalf. File checks are material maintenance,
+  not practical learning evidence.
+- The learner subsequently stated that Python is not installed, so command
+  output is not required to establish the starting point. The original discovery
+  request is withdrawn, not failed. The mentor checked official Python Windows
+  installation documentation and release listings, then provided a guided
+  installation task using Python install manager and proposed Python 3.14 for
+  the exercise. This is an exercise recommendation, not an agreed final project
+  runtime or verified dependency stack. At that point installation and version
+  verification remained unreported; no installation was performed by the agent.
+- The learner then supplied terminal output showing Python 3.15.2 for both
+  `py --version` and `py -V:3.15 --version`, and no matching 3.14 runtime.
+  Interpreter availability is established by this learner-supplied evidence;
+  the installation steps themselves were not observed. The mentor accepts 3.15
+  for the M01 exercise, replacing the earlier 3.14 recommendation. Current
+  pytest maintainer metadata explicitly lists Python 3.15 support. This is
+  declared support, not a local pytest installation or passing test run, and
+  does not establish compatibility of the entire future project stack.
+  Virtual-environment creation and verification were assigned with explained
+  command scaffolding; the learner has not yet supplied results. The mentor
+  created only the prompt, not the exercise folder, environment, code, or tests.
+- Before creating `m01-reservations`, the learner requested organizing the
+  exercise directory so practical work would not mix with feedback files.
+  The mentor separated existing files into `exercises/prompts/` and
+  `exercises/feedback/`, moved the empty-directory placeholder to
+  `exercises/workspaces/`, rebased local links, and updated the assigned M01
+  path to `project-materials/exercises/workspaces/m01-reservations/`.
+  The layout rule is owned by [AGENTS.md](../AGENTS.md). Feedback wording,
+  exercise IDs, and recorded learning evidence are preserved; this is repository
+  maintenance by the mentor, not learner coding evidence. The practical workspace
+  and virtual environment remain uncreated by the mentor.
 
 ## Next Action
 
-Remain in completed M00 and wait for explicit owner confirmation before M01;
-do not start exercise setup, install dependencies, or silently advance units.
-The final review and feedback are recorded; do not repeat completed questions.
-When the owner confirms moving to M01, read its prerequisites and guide the
-independent exercise setup, supporting Python syntax/functions and modularity
-as needed. Do not add a separate preliminary Python refresher course.
+Review the learner's attempt at
+[m01-02-virtual-environment.md](exercises/prompts/m01-02-virtual-environment.md), using
+the available Python 3.15.2. Do not repeat installation or require 3.14.
+The learner's target directory is now
+`project-materials/exercises/workspaces/m01-reservations/`; use the updated
+prompt rather than the earlier chat path when creating it.
+Check exercise location and direct environment-interpreter version output;
+then guide Git ignore verification, environment use, and dependency setup.
+Establish the editor when relevant. Treat setup errors as troubleshooting evidence.
+Do not create the environment or implement the learner's function/test for him.
+The M00 final review and feedback are recorded; do not repeat completed questions.
+Support Python syntax/functions and modularity during practical tasks as needed.
+Do not add a separate preliminary Python refresher course.
 Assess only stated requirements; do not ask the learner to infer extra unknowns
 when the question already supplies the source and contract facts.
 Future prompts must identify relevant data, time scope, grain, and definitions
@@ -286,5 +345,5 @@ Address actual gaps or clarifications without assuming that a missed condition
 proves a conceptual misunderstanding. Use the fictional reservation example
 for the next theoretical explanation.
 Record demonstrated understanding separately from delivered explanations.
-Finish all M00 coverage and its acceptance before M01 exercises; main-project
-work remains blocked until M01 and M02 readiness is demonstrated.
+M00 coverage and introductory acceptance are complete; main-project work
+remains blocked until M01 and M02 readiness is demonstrated.

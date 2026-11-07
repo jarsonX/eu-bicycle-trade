@@ -1,7 +1,7 @@
 # M00 Part 3 Understanding Feedback
 
 Reviewed: 2026-10-29 (Europe/Warsaw). Source: the learner's chat responses to
-[m00-03-provenance-snapshots-and-reproducibility.md](../lectures/m00-03-provenance-snapshots-and-reproducibility.md).
+[m00-03-provenance-snapshots-and-reproducibility.md](../../lectures/m00-03-provenance-snapshots-and-reproducibility.md).
 
 ## Demonstrated Understanding
 

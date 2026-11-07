@@ -1,7 +1,7 @@
 # M00 Part 8 Understanding Feedback
 
 Reviewed: 2026-11-01 (Europe/Warsaw). Evidence: the learner's chat answers to
-[m00-08-type-hints-and-runtime-validation.md](../lectures/m00-08-type-hints-and-runtime-validation.md).
+[m00-08-type-hints-and-runtime-validation.md](../../lectures/m00-08-type-hints-and-runtime-validation.md).
 
 The learner correctly identified the mismatch between the declared `int` return
 and actual `str` return. He correctly explained that plain Python annotations

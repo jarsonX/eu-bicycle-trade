@@ -1,7 +1,7 @@
 # M00 Part 4 Understanding Feedback
 
 Reviewed: 2026-10-29 (Europe/Warsaw). Source: the learner's chat answers to
-[m00-04-environment-configuration-and-notebook-state.md](../lectures/m00-04-environment-configuration-and-notebook-state.md).
+[m00-04-environment-configuration-and-notebook-state.md](../../lectures/m00-04-environment-configuration-and-notebook-state.md).
 
 ## Interpreter Selection
 

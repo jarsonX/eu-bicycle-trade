@@ -1,7 +1,7 @@
 # M00 Part 2 Understanding Feedback
 
 Reviewed: 2026-10-22. Source: the learner's chat responses to
-[m00-02-data-meaning-and-contracts.md](../lectures/m00-02-data-meaning-and-contracts.md).
+[m00-02-data-meaning-and-contracts.md](../../lectures/m00-02-data-meaning-and-contracts.md).
 
 ## Demonstrated Understanding
 

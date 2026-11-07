@@ -3,7 +3,7 @@
 Recorded after discussion, the learner's clarifications, and his explicit
 request to save the feedback: 2026-11-01 (Europe/Warsaw). Evidence: the chat
 review of
-[m00-11-quality-gates-and-reproducibility.md](../lectures/m00-11-quality-gates-and-reproducibility.md).
+[m00-11-quality-gates-and-reproducibility.md](../../lectures/m00-11-quality-gates-and-reproducibility.md).
 
 ## Quality Evidence And Reproducibility
 
@@ -79,4 +79,4 @@ dependency installation, exercise preparation, main-project implementation,
 or live data acquisition is authorized by completing this review.
 
 The current state and transition boundary are recorded in
-[PROGRESS.md](../PROGRESS.md).
+[PROGRESS.md](../../PROGRESS.md).

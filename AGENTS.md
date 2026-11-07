@@ -33,6 +33,10 @@ Authoring or reviewing them does not start teaching.
   acceptance in `project-guidance/`.
 - Use `project-materials/lectures/` for generated lectures and
   `project-materials/exercises/` for prompts, code/data/tests, attempts, and feedback.
+  Within exercises, keep task descriptions in `prompts/`, reviews of learner
+  answers/attempts in `feedback/`, and practical exercise directories containing
+  code/data/tests and working attempts in `workspaces/`. Create a workspace only
+  when its exercise starts; use stable exercise IDs in filenames/directory names.
   Study notes and progress also belong in materials; create them only when needed.
   Shipped directory placeholders are not learning evidence.
 - Real data/snapshots, EDA, implementation, tests, reports, and operational docs

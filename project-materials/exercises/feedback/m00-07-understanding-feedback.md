@@ -2,7 +2,7 @@
 
 Reviewed: 2026-10-31 (Europe/Warsaw). Evidence: the learner's clarification
 requests, explanation of his reasoning, and answer to question 2 from
-[m00-07-charts-and-interpretation.md](../lectures/m00-07-charts-and-interpretation.md).
+[m00-07-charts-and-interpretation.md](../../lectures/m00-07-charts-and-interpretation.md).
 
 ## Scope And Denominator Reasoning
 

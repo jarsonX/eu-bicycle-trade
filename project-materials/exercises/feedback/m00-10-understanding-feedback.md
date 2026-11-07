@@ -2,7 +2,7 @@
 
 Reviewed after discussion and explicitly approved for saving by the learner:
 2026-11-01 (Europe/Warsaw). Evidence: his chat answers and the agreed review of
-[m00-10-testing-and-independent-expectations.md](../lectures/m00-10-testing-and-independent-expectations.md).
+[m00-10-testing-and-independent-expectations.md](../../lectures/m00-10-testing-and-independent-expectations.md).
 
 ## Reader And Integration Investigation
 
@@ -46,4 +46,4 @@ needed. This demonstrates test-design reasoning; no test implementation or
 execution was required or reported. Continue to M00 part 11.
 
 The learner additionally requires explicit confirmation before starting M01.
-The transition boundary is recorded in [PROGRESS.md](../PROGRESS.md).
+The transition boundary is recorded in [PROGRESS.md](../../PROGRESS.md).

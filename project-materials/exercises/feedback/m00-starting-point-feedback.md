@@ -1,7 +1,7 @@
 # M00 Starting-Point Feedback
 
 Reviewed: 2026-10-22. Evidence: the learner's answers in chat to
-[m00-starting-point.md](m00-starting-point.md). This is a reasoning review;
+[m00-starting-point.md](../prompts/m00-starting-point.md). This is a reasoning review;
 the learner did not report running code or Git commands.
 
 ## Python

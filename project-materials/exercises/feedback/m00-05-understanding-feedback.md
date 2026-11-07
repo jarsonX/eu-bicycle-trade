@@ -1,7 +1,7 @@
 # M00 Part 5 Understanding Feedback
 
 Reviewed: 2026-10-31 (Europe/Warsaw). Evidence: the learner's chat answer to
-[m00-05-pandas-inspection-filtering-and-grouping.md](../lectures/m00-05-pandas-inspection-filtering-and-grouping.md).
+[m00-05-pandas-inspection-filtering-and-grouping.md](../../lectures/m00-05-pandas-inspection-filtering-and-grouping.md).
 
 The learner correctly derived A = 60 and B = 45. He explained that the filter
 excludes durations below 45 minutes, so only reservations 2 and 3 contribute.

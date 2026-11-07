@@ -3,7 +3,7 @@
 Reviewed and corrected after discussion: 2026-11-01 (Europe/Warsaw).
 Evidence: the learner's answers and subsequent explanation of his intent in chat,
 in response to
-[m00-09-errors-logging-and-network-boundaries.md](../lectures/m00-09-errors-logging-and-network-boundaries.md).
+[m00-09-errors-logging-and-network-boundaries.md](../../lectures/m00-09-errors-logging-and-network-boundaries.md).
 
 ## Demonstrated Reasoning
 

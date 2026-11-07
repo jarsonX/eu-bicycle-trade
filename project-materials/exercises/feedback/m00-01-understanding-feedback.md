@@ -1,7 +1,7 @@
 # M00 Part 1 Understanding Feedback
 
 Reviewed: 2026-10-22. Source: the learner's answers in chat to
-[m00-01-responsibilities-and-interfaces.md](../lectures/m00-01-responsibilities-and-interfaces.md).
+[m00-01-responsibilities-and-interfaces.md](../../lectures/m00-01-responsibilities-and-interfaces.md).
 
 The learner correctly identified input acquisition as the responsibility affected
 by replacing CSV input with database input. He explained that preserving the
