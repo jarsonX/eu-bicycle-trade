@@ -40,6 +40,11 @@ Authoring or reviewing them does not start teaching.
   when its exercise starts; use stable exercise IDs in filenames/directory names.
   Study notes and progress also belong in materials; create them only when needed.
   Shipped directory placeholders are not learning evidence.
+- Maintain reusable learner-facing commands in the shared
+  [COMMANDS.md](project-materials/COMMANDS.md), across all modules and exercises.
+  Add commands as they are introduced, with purpose, shell, working directory,
+  and relevant effects or result interpretation. Do not create separate command
+  reference files per task or module; task documents may retain relevant steps.
 - Real data/snapshots, EDA, implementation, tests, reports, and operational docs
   belong in ordinary project directories even during learning. Their content and
   commit messages describe actual project work/evidence; invented client/role
