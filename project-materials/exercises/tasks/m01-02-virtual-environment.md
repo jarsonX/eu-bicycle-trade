@@ -4,6 +4,12 @@ Assigned: 2026-11-07 (Europe/Warsaw).
 Prerequisite: learner-supplied output confirms Python 3.15.2 is available;
 see [m01-01-interpreter-discovery.md](m01-01-interpreter-discovery.md).
 
+Outcome: the learner supplied `Python 3.15.2` from
+`.\.venv\Scripts\python.exe --version` in the assigned exercise directory.
+He chose Visual Studio Code. The step's direct-interpreter check is met;
+editor selection and terminal activation are not established by this output.
+Continue with [m01-03-vscode-interpreter.md](m01-03-vscode-interpreter.md).
+
 ## Purpose
 
 A virtual environment provides a separate package installation location for
