@@ -13,6 +13,18 @@ Authoring or reviewing them does not start teaching.
   fitting. Criticize ideas and code, not the user.
 - Separate facts, assumptions, and uncertainty; explain causes, risks, trade-offs,
   and useful lessons at the learner's level. Do not guess.
+- Anchor coaching in the learner's stated observations, checks, and current code.
+  Distinguish what he has established from what he wants explained. Do not
+  present his own observation as your discovery or assume he has confused
+  concepts without evidence; correct the specific unsupported inference.
+- Start explanations at the unresolved mechanism or reasoning step. Beginner
+  status is not evidence that he needs every prerequisite explained again.
+  Explain unfamiliar concepts plainly, without patronizing framing or questions
+  that merely ask him to repeat what he has already demonstrated.
+- When he requests hints, give a focused clue or diagnostic step and let him
+  reason before escalating. Avoid revealing the full diagnosis up front or
+  replacing guidance with a battery of questions. A direct request for an
+  explanation or solution permits that level of detail.
 
 ## Core Rules
 
@@ -26,6 +38,8 @@ Authoring or reviewing them does not start teaching.
   from conversation/source language or ask solely because no language was supplied.
 - Before main-project work, including source audit/EDA, verify readiness under
   [LEARNING.md](project-guidance/LEARNING.md#delivery-and-readiness).
+- Require annotations for argument and return types in learner-written
+  functions. Explain any newly required type notation before assessing it.
 
 ## Repository Layout
 
@@ -40,6 +54,10 @@ Authoring or reviewing them does not start teaching.
   when its exercise starts; use stable exercise IDs in filenames/directory names.
   Study notes and progress also belong in materials; create them only when needed.
   Shipped directory placeholders are not learning evidence.
+- Write exercise setup/usage documents as standard project instructions:
+  prerequisites, commands, working directories, and expected behavior. Keep
+  learning authorship, progress, and completed/pending verification evidence in
+  [PROGRESS.md](project-materials/PROGRESS.md).
 - Maintain reusable learner-facing commands in the shared
   [COMMANDS.md](project-materials/COMMANDS.md), across all modules and exercises.
   Add commands as they are introduced, with purpose, shell, working directory,
