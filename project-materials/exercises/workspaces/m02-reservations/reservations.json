@@ -1,0 +1,6 @@
+[
+  {"reservation_id": 101, "room": "A", "duration": 25, "duration_unit": "minutes"},
+  {"reservation_id": 102, "room": "B", "duration": 30, "duration_unit": "minutes"},
+  {"reservation_id": 103, "room": "A", "duration": 50, "duration_unit": "minutes"},
+  {"reservation_id": 104, "room": "B", "duration": 45, "duration_unit": "minutes"}
+]

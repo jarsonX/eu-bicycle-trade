@@ -4,8 +4,16 @@
 
 - Started: 2026-10-22 (Europe/Warsaw).
 - Phase: independent exercises.
-- Active unit: none — M01 complete; M02 is next and has not started.
-- Status: M01 completed on 2026-11-08 after starting on 2026-11-07.
+- Active unit: M02 — Engineering Concepts And Readiness.
+- Status: M02 started on 2026-11-13 at the learner's explicit request. The
+  responsibility split is agreed after discussion. The learner chose separate
+  loading and validation and confirmed both calculation arguments. The record
+  type and loader stage is accepted after both corrections were verified.
+  The separate validator is now assigned with the explained `-> None` /
+  `ValueError` contract and four disclosed business rules.
+  M02's own `.venv` interpreter is available and was used for these checks.
+  Validation implementation/tests and M02 readiness remain pending.
+- M01 baseline: completed on 2026-11-08 after starting on 2026-11-07.
   Learner-supplied terminal output confirms
   Python 3.15.2 responds to both `py --version` and `py -V:3.15 --version`.
   Python 3.14 is absent according to the explicit version-selection error.
@@ -55,8 +63,9 @@
   Part 7's ratio setup remains mentor-supplied, with no independent numerical
   percentage answer claimed. Completion does not imply practical implementation
   mastery or readiness for main-project work.
-- Latest delivery: 2026-11-08 (Europe/Warsaw), final interpreter-selection
-  explanation accepted and M01 closed. M02 has not started.
+- Latest activity: the learner requested the next task with only small hints.
+  Both loader-stage corrections are verified. The mentor introduced the separate
+  validator task without an implementation. M00 and M01 remain complete.
 - The owner explicitly requested guided learning under the current plan.
 - Owner transition boundary satisfied on 2026-11-07: the learner explicitly
   said "Skończyliśmy M00. Przejdźmy do M01." He reaffirmed that the agent is
@@ -74,6 +83,12 @@
 - Sequence, prerequisites, and learning acceptance: [LEARNING.md](../project-guidance/LEARNING.md).
 - Analytical scope and product acceptance: [PROJECT.md](../project-guidance/PROJECT.md).
 - Shared command reference: [COMMANDS.md](COMMANDS.md).
+- M02 responsibility task: [m02-01-responsibilities-and-interfaces.md](exercises/tasks/m02-01-responsibilities-and-interfaces.md).
+- Completed M02 loader task: [m02-02-load-reservations.md](exercises/tasks/m02-02-load-reservations.md).
+- Active M02 task: [m02-03-validate-reservations.md](exercises/tasks/m02-03-validate-reservations.md).
+- M02 responsibility plan: [DESIGN.md](exercises/workspaces/m02-reservations/DESIGN.md).
+- M02 starting script: [mixed_reservations.py](exercises/workspaces/m02-reservations/mixed_reservations.py).
+- M02 fictional input: [reservations.json](exercises/workspaces/m02-reservations/reservations.json).
 - Exercise setup notes: [SETUP.md](exercises/workspaces/m01-reservations/SETUP.md).
 - First M01 task: [m01-01-interpreter-discovery.md](exercises/tasks/m01-01-interpreter-discovery.md).
 - Environment creation task: [m01-02-virtual-environment.md](exercises/tasks/m01-02-virtual-environment.md).
@@ -670,54 +685,131 @@
   assistance rather than independently designed learner work. No extra test,
   installation, cleanup, Git mutation, or main-project work was performed.
 
+- On 2026-11-13 the learner explicitly requested starting M02. Inspection
+  confirmed completed M00/M01 prerequisites, a clean working tree, and the
+  existing M01 `.venv-repro` executable. The mentor created a separate
+  `m02-reservations` workspace containing an original mixed script and a
+  four-record fictional JSON export. The script combines file input, the
+  previously explained nonblank-room check, summation, and printing at module
+  scope; none of the three assigned new validation implementations is supplied.
+  The prompt discloses grain/day/units, the whole-export failure policy, and
+  basic-type/structure assumptions. File-reading syntax is explained as supplied
+  scaffolding. The current assignment is only the learner's responsibility/
+  interface plan and execution order; implementation and tests follow discussion.
+  The shared command reference includes optional execution using M01's existing
+  interpreter. No learner attempt or M02 completion is inferred from these
+  mentor-authored materials; no M01 source/test, dependency, or environment
+  change, installation, or main-project work was performed.
+  Mentor execution of the new starter through the existing M01 `.venv-repro`
+  interpreter with `-B` printed `Room B: 75 booked minutes.` and exited
+  successfully. This verifies only the supplied valid-data starting point;
+  no learner test or invalid-input rejection is claimed. All 57 local file
+  links in the three affected Markdown documents resolve, relevant task/routing
+  headings were inspected, and `git diff --check` found no whitespace errors.
+
+- The learner submitted a prose responsibility/interface plan in chat. He
+  identified configuration, file reading, room-label validation, summation, and
+  printing in the starter. His proposed design has a configuration object,
+  `load_and_validate` returning `list[Reservation]`, `total_minutes_for_room`
+  returning an integer minute total, and printing under the main guard.
+  He chose whole-export loading for reuse across requested rooms and reasoned
+  that absent-room queries should yield zero, given the lack of a room register.
+  He proposed unique-ID, minute-unit, and positive-duration validation.
+  His loader's proposed inputs include `requested_room`, while the calculation's
+  listed inputs contain only reservations. The proposal leaves the choice of a
+  separate in-memory validator open for discussion. This records the submitted
+  reasoning with design review pending.
+
+- Following discussion of the initial proposal, the learner explicitly selected
+  separate loading and validation and specified `reservations` and
+  `requested_room` as the calculation arguments. The responsibility plan is
+  accepted at this design level. The mentor saved it in the exercise's
+  [DESIGN.md](exercises/workspaces/m02-reservations/DESIGN.md), preserving the
+  learner's configuration grouping and main-guard print. The loader's exact
+  name/annotations and a record-type/loader-first implementation sequence are
+  mentor-provided task guidance. The validator's successful-return convention
+  and configuration representation remain to be discussed at their respective
+  implementation steps. No independent learner rationale for preferring the
+  split after the testing explanation is claimed. The new task explains `Path`
+  as an annotation and assigns the four-field `TypedDict`, a complete-export
+  loader, and guarded example execution. The mentor has supplied no learner
+  function body, validation, or test, and has not changed or run exercise code.
+
+- The learner stated that his code is unfinished and explicitly requested no
+  code assessment yet. His pasted terminal error was caused by using a
+  repository-root-relative path while already inside the M01 workspace. The
+  mentor explained sibling-directory navigation. The learner then questioned
+  using M01's interpreter for M02. The earlier shared `.venv-repro` choice was
+  mentor-proposed convenience. Instructions now use M02's own `.venv` to isolate
+  exercise packages and simplify local execution paths. Filesystem existence
+  checks found neither that environment directory nor its interpreter. The
+  mentor updated the shared commands and both M02 task documents and assigned
+  environment creation through the already installed Python 3.15. No exercise
+  source was read, executed, or assessed during this setup correction.
+
+- The learner explicitly requested review of the completed loader stage while
+  stating that validation and later functions have not been written. Inspection
+  found `load_reservation(input_path: Path, encoding: str) -> list[Reservation]`
+  using both arguments and returning parsed data. The singular function name
+  is accepted for this exercise. Mentor checks through M02's `.venv` interpreter
+  with `-B` verified the complete four-record export, an alternative file with
+  non-ASCII text encoded as cp1250, a JSON empty list, propagation of
+  `JSONDecodeError` for empty/malformed text, and `FileNotFoundError` for a
+  missing path. Temporary-file checks required a sandbox escalation after the
+  first write was denied; the approved rerun succeeded and temporary artifacts
+  were removed. Source and supplied-data hashes stayed unchanged.
+  Two corrections remain. `Reservation` declares `duration_minutes` while this
+  export contains `duration`. The `reservation_data = load_reservation(...)`
+  call is outside the main guard; instrumented module loading observed one
+  data-file read and no printing. Move this call under the existing guard and
+  align the TypedDict field with the input. These are disclosed record/interface
+  and import-effect requirements. The current raw-data print is treated as
+  inspection output for this explicitly limited submission; calculation/report
+  integration will follow. No learner pytest evidence, validation implementation,
+  or complete M02 acceptance is claimed. No learner source was edited.
+
+- After discussing why the main guard prevents execution of the example during
+  import, the learner requested the next task, explicitly asking for instructions
+  and at most small hints. Inspection found `Reservation.duration` correctly
+  declared and the loader invocation inside the existing main guard. A focused
+  module-load check through M02's interpreter with `-B` made `Path.read_text`
+  fail on any call; importing the corrected module succeeded, printed nothing,
+  and exposed all four required record-field names. Both corrections are
+  accepted. The previously verified loader body is unchanged, so its read/parse
+  cases were not repeated. The mentor introduced the separate validator's
+  `list[Reservation]` argument, successful `-> None` convention, and `ValueError`
+  failure behavior. This interface/return convention is instructional guidance,
+  with no independent learner design or understanding inferred yet. The new
+  task discloses the four business rules, valid empty input, preserved data,
+  whole-export scope, and the guarded call after loading. Its single hint
+  distinguishes a list-wide rule from individual-record rules. No validation
+  body, test implementation, or learner code edit was supplied.
+
 ## Next Action
 
-On continuation, begin M02 under [LEARNING.md](../project-guidance/LEARNING.md#m02--engineering-concepts-and-readiness):
-use a deliberately mixed fictional reservation script to practise separating
-responsibilities/interfaces, validation, and test levels. Explain and disclose
-the next task before learner implementation. No M02 workspace or starter script
-has been created yet. M00 and M01 prerequisites are complete.
-Reproduction and the closing explanation under
-[m01-11-environment-reproduction.md](exercises/tasks/m01-11-environment-reproduction.md)
-are accepted. Do not repeat completed Git/file-selection or interpreter
-questions, arithmetic, installations, or tests.
-Keep `.venv`, `.venv-repro`, and source files; no cleanup was requested.
-Use the completed [SETUP.md](exercises/workspaces/m01-reservations/SETUP.md)
-with the explained environment-prefix substitution. The workspace review under
-[m01-10-git-review.md](exercises/tasks/m01-10-git-review.md) is complete, including
-file selection, assisted patch interpretation, ignore rules, and resulting
-status; do not reassign it or infer a review of every repository change.
-The ignored notebook was preserved; no deletion, staging, or commit is authorized.
-The assisted configuration step under
-[m01-09-pytest-configuration.md](exercises/tasks/m01-09-pytest-configuration.md)
-is complete using the inspected file and learner-supplied collection and passing
-run; do not reassign it. The revised first-test code passes review; requested
-local-data and runner corrections are verified and must not be reassigned.
-Keep the independent-expectation evidence limit explicit without
-assuming how the learner chose his existing value or repeating the same
-arithmetic as a conceptual quiz. Distinguish mentor reference code from
-learner-owned test reasoning.
-M01 fresh-environment reproduction, operational documentation, and the final
-interpreter-selection explanation are complete.
-Do not repeat the completed Git discussion or invent dependency versions/results.
-Do not repeat the completed terminal-interpreter check or require 3.14.
-Use the shared [COMMANDS.md](COMMANDS.md) for command lookup and extend it when
-introducing reusable commands. Account for PowerShell versus CMD syntax where
-relevant. Treat setup errors as troubleshooting evidence.
-Do not create the environment or implement the learner's function/test for him.
-The M00 final review and feedback are recorded; do not repeat completed questions.
-Support Python syntax/functions and modularity during practical tasks as needed.
-Do not add a separate preliminary Python refresher course.
-Assess only stated requirements; do not ask the learner to infer extra unknowns
-when the question already supplies the source and contract facts.
-Future prompts must identify relevant data, time scope, grain, and definitions
-explicitly. Treat justified business-context clarification as analytical evidence.
-For requests to clarify a prompt, explain only the ambiguous term or assumption;
-leave value selection, concrete substitutions, and calculations to the learner
-unless asked.
-Address actual gaps or clarifications without assuming that a missed condition
-proves a conceptual misunderstanding. Use the fictional reservation example
-for the next theoretical explanation.
-Record demonstrated understanding separately from delivered explanations.
-M00 and M01 acceptance are complete; main-project work remains blocked until
-M02 readiness is demonstrated.
+Wait for the learner's validator attempt in
+[mixed_reservations.py](exercises/workspaces/m02-reservations/mixed_reservations.py)
+under [m02-03-validate-reservations.md](exercises/tasks/m02-03-validate-reservations.md).
+Review the disclosed four rules, successful `None` return, `ValueError` failures,
+valid empty input, unchanged records, and call after loading/before printing.
+Keep guidance to focused hints until a direct solution/explanation is requested.
+Discuss the attempt before assigning automated tests or later functions.
+The loader and its two corrections are accepted; repeat checks only for new
+changes or concerns. Settle the configuration representation during orchestration.
+
+Later guide annotated implementation, the learner-designed duplicate-ID,
+wrong-unit, and negative-duration validations/tests, and unit/integration test
+scope. Explain new syntax/type notation before assessing it. Do not implement
+the learner's refactor or test cases. Record reasoning and supplied assistance
+separately; creating/running the starter is not readiness evidence.
+
+M00/M01 are complete; do not repeat their Git/file-selection, interpreter,
+configuration, reproduction, or arithmetic checks. Preserve the earlier limits
+on independent expected-value reasoning and reference-code authorship.
+Keep M01 `.venv`, `.venv-repro`, source/tests, and the ignored notebook intact.
+No cleanup, staging, commit, third-party package installation, or external call
+is assigned.
+Use [COMMANDS.md](COMMANDS.md) for reusable commands and distinguish their working
+directories. Conversation remains Polish; saved materials remain English.
+Main-project work starts only after demonstrated M02 readiness under
+[LEARNING.md](../project-guidance/LEARNING.md#m02--engineering-concepts-and-readiness).

@@ -5,8 +5,10 @@ modules and exercises. Entries explain purpose and working directory; inclusion
 does not mean that the learner has run or mastered a command. Learning evidence
 is recorded separately in [PROGRESS.md](PROGRESS.md).
 
-The repository root is the `eu-bicycle-trade` directory. The current exercise
-directory is `project-materials/exercises/workspaces/m01-reservations/`.
+The repository root is the `eu-bicycle-trade` directory. The active M02 workspace
+is `project-materials/exercises/workspaces/m02-reservations/`; it uses its own
+`.venv`. Earlier M01 entries retain their stated
+working directories under `project-materials/exercises/workspaces/m01-reservations/`.
 Python and Git commands below work in Windows PowerShell and Command Prompt
 (CMD). Navigation commands are labelled by shell. Run each command separately.
 
@@ -36,7 +38,7 @@ python -c "import sys; print(sys.executable)"
 - `sys.executable` is the path to the running interpreter executable.
 - `print(...)` displays that value; the semicolon separates two statements.
 
-For the current exercise, expect a path ending in
+For the M01 environment check, expect a path ending in
 `m01-reservations\.venv\Scripts\python.exe`. The terminal's current directory
 can still be the repository root. The executable path establishes interpreter
 selection more precisely than the version: different environments can use the
@@ -74,9 +76,27 @@ total booked minutes for room `B` in its sample data. This invokes the script
 directly; it does not run pytest. The explicit interpreter path works without
 environment activation.
 
+### Run The M02 Starting Script
+
+**Where:** `project-materials/exercises/workspaces/m02-reservations/`,
+in PowerShell or CMD. **Prerequisite:** the M02 `.venv` created under
+[Create The M02 Environment](#create-the-m02-environment).
+
+```console
+.\.venv\Scripts\python.exe mixed_reservations.py
+```
+
+The executable and script belong to the M02 workspace. The explicit executable
+path works without activation. The supplied example reads its adjacent
+`reservations.json` and prints the room-B booked total in minutes. This command
+executes the current working script. Automated test commands will be introduced
+with the testing step.
+
 ## Virtual Environments
 
-**Where:** the current exercise directory, not the repository root.
+**Where:** `project-materials/exercises/workspaces/m01-reservations/`,
+not the repository root. This is the earlier M01 setup reference, not a step
+to repeat for M02.
 
 Create the exercise environment using Python 3.15:
 
@@ -100,6 +120,27 @@ makes commands such as `python` resolve to the environment in that terminal;
 choosing an interpreter in the editor and activating a terminal are separate.
 
 Source: [Python virtual environments](https://docs.python.org/3.15/library/venv.html).
+
+### Create The M02 Environment
+
+**Where:** `project-materials/exercises/workspaces/m02-reservations/`,
+in PowerShell or CMD. **Prerequisite:** Python 3.15 is already available and
+the target `.venv` directory has not yet been created.
+
+```console
+py -V:3.15 -m venv .venv
+```
+
+Creates an exercise-local environment using the installed Python 3.15. Its
+interpreter is `.venv\Scripts\python.exe`, and its installed packages are
+isolated from the M01 environments. Run the creation command once for this
+workspace. The current loader uses Python's standard library. Package setup
+for the later automated tests will be introduced at that step.
+
+The same Python version can underpin several separate virtual environments.
+Each environment provides its own interpreter entry point and package directory.
+The existing interpreter-inspection commands above can also use this explicit
+executable path.
 
 ### Create And Inspect A Reproduction Environment
 
@@ -364,6 +405,13 @@ cd project-materials\exercises\workspaces\m01-reservations
 
 Paths beginning with `.` refer to the current directory. Navigation matters
 because a relative path such as `.venv` is interpreted from that directory.
+
+To move from the M01 workspace to the neighbouring M02 workspace, in PowerShell
+or CMD, use the following command. `..` refers to the parent `workspaces` directory.
+
+```console
+cd ..\m02-reservations
+```
 
 ## Git Inspection
 
