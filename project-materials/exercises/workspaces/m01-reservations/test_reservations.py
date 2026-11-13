@@ -1,8 +1,6 @@
 from reservations import Reservation, total_minutes_for_room
 
 # Test 1
-# Dwie rezerwacje szukanej sali i jedna innej sali.
-# Przygotuj własne poprawne dane, policz wynik ręcznie i sprawdź go.
 
 def test_sum() -> None:
     reservations: list[Reservation] = [
@@ -13,8 +11,8 @@ def test_sum() -> None:
     result = total_minutes_for_room(reservations, "B")
     assert result == 50
 
+
 # Test 2
-# Niepusta lista, w której nie ma szukanej sali.
 
 def test_room_not_exist() -> None:
     reservations: list[Reservation] = [
@@ -26,8 +24,8 @@ def test_room_not_exist() -> None:
     result = total_minutes_for_room(reservations, "C")
     assert result == 0
 
+
 # Test 3
-# Pusta lista.
 
 def test_empty_list() -> None:
     reservations: list[Reservation] = []
